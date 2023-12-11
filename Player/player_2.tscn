@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bga8drr051kf5"]
+
+[ext_resource type="Script" path="res://Player/Player2.gd" id="1_o2f5s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tojed"]
+size = Vector2(50, 200)
+
+[node name="Player2" type="CharacterBody2D"]
+script = ExtResource("1_o2f5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tojed")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -25.0
+offset_top = -100.0
+offset_right = 25.0
+offset_bottom = 100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -11.0
+offset_top = -13.0
+offset_right = 11.0
+offset_bottom = 13.0
+text = "P2"

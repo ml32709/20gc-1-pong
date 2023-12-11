@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdbp4wraoij6l"]
+[gd_scene load_steps=6 format=3 uid="uid://bdbp4wraoij6l"]
 
 [ext_resource type="Script" path="res://Ball/ball.gd" id="1_nugne"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rdrh6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcpwp"]
 size = Vector2(50, 50)
@@ -15,6 +17,7 @@ size = Vector2(40, 54)
 script = ExtResource("1_nugne")
 
 [node name="Panel" type="Panel" parent="."]
+material = SubResource("CanvasItemMaterial_rdrh6")
 offset_left = -25.0
 offset_top = -25.0
 offset_right = 25.0
