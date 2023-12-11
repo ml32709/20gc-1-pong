@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdbp4wraoij6l"]
+[gd_scene load_steps=5 format=3 uid="uid://bdbp4wraoij6l"]
 
 [ext_resource type="Script" path="res://Ball/ball.gd" id="1_nugne"]
 
@@ -7,6 +7,9 @@ size = Vector2(50, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nurqd"]
 size = Vector2(54, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17i40"]
+size = Vector2(40, 54)
 
 [node name="Ball" type="CharacterBody2D"]
 script = ExtResource("1_nugne")
@@ -25,4 +28,10 @@ shape = SubResource("RectangleShape2D_jcpwp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BumpDetection"]
 shape = SubResource("RectangleShape2D_nurqd")
 
+[node name="WallBumpDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBumpDetection"]
+shape = SubResource("RectangleShape2D_17i40")
+
 [connection signal="body_entered" from="BumpDetection" to="." method="_on_bump_detection_body_entered"]
+[connection signal="body_entered" from="WallBumpDetection" to="." method="_on_wall_bump_detection_body_entered"]
