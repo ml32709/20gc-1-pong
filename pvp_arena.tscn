@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckmq4xufdxirq"]
+[gd_scene load_steps=7 format=3 uid="uid://ckmq4xufdxirq"]
 
 [ext_resource type="PackedScene" uid="uid://dtsixhn8wbvp6" path="res://Player/player.tscn" id="1_glmhy"]
 [ext_resource type="PackedScene" uid="uid://bdbp4wraoij6l" path="res://Ball/ball.tscn" id="3_tthrd"]
 [ext_resource type="PackedScene" uid="uid://byjvho67qqgbf" path="res://Walls/basic_wall.tscn" id="4_vj2yt"]
 [ext_resource type="PackedScene" uid="uid://bga8drr051kf5" path="res://Player/player_2.tscn" id="5_f03lp"]
 [ext_resource type="PackedScene" uid="uid://cpcjw1m3agy2e" path="res://Walls/point_wall.tscn" id="5_vvf08"]
+[ext_resource type="PackedScene" uid="uid://2epk0u6bgvhy" path="res://Walls/midline.tscn" id="6_8do1m"]
 
 [node name="Arena" type="Node2D"]
 
@@ -28,3 +29,6 @@ position = Vector2(1150, 325)
 
 [node name="Player2" parent="." instance=ExtResource("5_f03lp")]
 position = Vector2(1050, 325)
+
+[node name="Midline" parent="." instance=ExtResource("6_8do1m")]
+position = Vector2(575, 325)
