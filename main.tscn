@@ -6,25 +6,25 @@
 script = ExtResource("1_hgfl7")
 
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 405.0
-offset_top = 53.0
-offset_right = 698.0
-offset_bottom = 188.0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 320.0
+offset_bottom = 192.0
 text = "Play AI"
 
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 411.0
-offset_top = 475.0
-offset_right = 704.0
-offset_bottom = 610.0
+offset_left = 64.0
+offset_top = 448.0
+offset_right = 320.0
+offset_bottom = 576.0
 text = "Quit
 "
 
 [node name="PVP" type="Button" parent="."]
-offset_left = 409.0
-offset_top = 247.0
-offset_right = 694.0
-offset_bottom = 398.0
+offset_left = 64.0
+offset_top = 256.0
+offset_right = 320.0
+offset_bottom = 384.0
 text = "PVP"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
