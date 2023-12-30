@@ -8,11 +8,19 @@
 [ext_resource type="PackedScene" uid="uid://2epk0u6bgvhy" path="res://Walls/midline.tscn" id="6_8do1m"]
 
 [node name="Arena" type="Node2D"]
+metadata/_edit_vertical_guides_ = []
+metadata/_edit_horizontal_guides_ = []
 
 [node name="Player" parent="." instance=ExtResource("1_glmhy")]
 position = Vector2(100, 325)
 
+[node name="Player2" parent="." instance=ExtResource("5_f03lp")]
+position = Vector2(1050, 325)
+
 [node name="Ball" parent="." instance=ExtResource("3_tthrd")]
+position = Vector2(575, 325)
+
+[node name="Midline" parent="." instance=ExtResource("6_8do1m")]
 position = Vector2(575, 325)
 
 [node name="BasicWall" parent="." instance=ExtResource("4_vj2yt")]
@@ -26,9 +34,3 @@ position = Vector2(0, 325)
 
 [node name="PointWall2" parent="." instance=ExtResource("5_vvf08")]
 position = Vector2(1150, 325)
-
-[node name="Player2" parent="." instance=ExtResource("5_f03lp")]
-position = Vector2(1050, 325)
-
-[node name="Midline" parent="." instance=ExtResource("6_8do1m")]
-position = Vector2(575, 325)
