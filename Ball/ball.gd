@@ -24,3 +24,9 @@ func _on_bump_detection_body_entered(body):
 
 func _on_wall_bump_detection_body_entered(body):
 	yDirection *= -1
+
+func resetStatus():
+	position.x = 575
+	position.y = 325
+	contestantPoint = 0
+	SPEED = 300
