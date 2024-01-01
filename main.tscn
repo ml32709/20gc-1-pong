@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0202bxs5u7w3"]
+[gd_scene load_steps=3 format=3 uid="uid://b0202bxs5u7w3"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_hgfl7"]
+[ext_resource type="PackedScene" uid="uid://b8gm8pajrrkfw" path="res://Menus/pong_sign.tscn" id="2_5p2hr"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_hgfl7")
@@ -26,6 +27,18 @@ offset_top = 256.0
 offset_right = 320.0
 offset_bottom = 384.0
 text = "PVP"
+
+[node name="PongSign" parent="." instance=ExtResource("2_5p2hr")]
+position = Vector2(392, 40)
+scale = Vector2(0.5, 0.5)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 632.0
+offset_top = 344.0
+offset_right = 848.0
+offset_bottom = 384.0
+text = "By Matthew Low
+Entry 1 of my 20 game challenge"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
