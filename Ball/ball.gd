@@ -12,7 +12,6 @@ func _physics_process(delta):
 
 func _on_bump_detection_body_entered(body):
 	if body.name == "PointWall" || body.name == "PointWall2":
-		print("point")
 		SPEED = 0
 		if xDirection == -1:
 			contestantPoint = 1
