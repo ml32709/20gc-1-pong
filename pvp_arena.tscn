@@ -1,13 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckmq4xufdxirq"]
+[gd_scene load_steps=9 format=3 uid="uid://ckmq4xufdxirq"]
 
+[ext_resource type="Script" path="res://arena.gd" id="1_8vdcc"]
 [ext_resource type="PackedScene" uid="uid://dtsixhn8wbvp6" path="res://Player/player.tscn" id="1_glmhy"]
 [ext_resource type="PackedScene" uid="uid://bdbp4wraoij6l" path="res://Ball/ball.tscn" id="3_tthrd"]
 [ext_resource type="PackedScene" uid="uid://byjvho67qqgbf" path="res://Walls/basic_wall.tscn" id="4_vj2yt"]
 [ext_resource type="PackedScene" uid="uid://bga8drr051kf5" path="res://Player/player_2.tscn" id="5_f03lp"]
 [ext_resource type="PackedScene" uid="uid://cpcjw1m3agy2e" path="res://Walls/point_wall.tscn" id="5_vvf08"]
 [ext_resource type="PackedScene" uid="uid://2epk0u6bgvhy" path="res://Walls/midline.tscn" id="6_8do1m"]
+[ext_resource type="PackedScene" uid="uid://dhow7plsw5iae" path="res://Menus/pause_menu.tscn" id="7_7w87o"]
 
 [node name="Arena" type="Node2D"]
+script = ExtResource("1_8vdcc")
 metadata/_edit_vertical_guides_ = []
 metadata/_edit_horizontal_guides_ = []
 
@@ -34,3 +37,21 @@ position = Vector2(0, 325)
 
 [node name="PointWall2" parent="." instance=ExtResource("5_vvf08")]
 position = Vector2(1150, 325)
+
+[node name="P1Score" type="Label" parent="."]
+offset_left = 450.0
+offset_top = 20.0
+offset_right = 550.0
+offset_bottom = 80.0
+text = "P1: "
+horizontal_alignment = 1
+
+[node name="P2Score" type="Label" parent="."]
+offset_left = 600.0
+offset_top = 20.0
+offset_right = 700.0
+offset_bottom = 80.0
+text = "P2: "
+horizontal_alignment = 1
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_7w87o")]

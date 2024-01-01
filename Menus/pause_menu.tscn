@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhow7plsw5iae"]
+
+[ext_resource type="Script" path="res://Menus/pause_menu.gd" id="1_o8qtc"]
+
+[node name="PauseMenu" type="Node2D"]
+script = ExtResource("1_o8qtc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 475.0
+offset_top = 325.0
+offset_right = 675.0
+offset_bottom = 351.0
+horizontal_alignment = 1
+
+[node name="MenuButton" type="Button" parent="."]
+offset_left = 244.0
+offset_top = 400.0
+offset_right = 500.0
+offset_bottom = 528.0
+text = "Return to Menu"
+
+[node name="ContinueButton" type="Button" parent="."]
+offset_left = 650.0
+offset_top = 400.0
+offset_right = 906.0
+offset_bottom = 528.0
+text = "Continue Game"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
