@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdbp4wraoij6l"]
+[gd_scene load_steps=8 format=3 uid="uid://bdbp4wraoij6l"]
 
 [ext_resource type="Script" path="res://Ball/ball.gd" id="1_nugne"]
+[ext_resource type="AudioStream" uid="uid://dyrhfuh54mhr8" path="res://assets/jump.wav" id="2_nacju"]
+[ext_resource type="AudioStream" uid="uid://dop55um0ex70b" path="res://assets/pickupCoin.wav" id="3_jt1hb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rdrh6"]
 
@@ -35,6 +37,12 @@ shape = SubResource("RectangleShape2D_nurqd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallBumpDetection"]
 shape = SubResource("RectangleShape2D_17i40")
+
+[node name="PointNoisePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nacju")
+
+[node name="BumpNoisePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jt1hb")
 
 [connection signal="body_entered" from="BumpDetection" to="." method="_on_bump_detection_body_entered"]
 [connection signal="body_entered" from="WallBumpDetection" to="." method="_on_wall_bump_detection_body_entered"]

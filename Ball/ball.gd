@@ -12,16 +12,19 @@ func _physics_process(delta):
 
 func _on_bump_detection_body_entered(body):
 	if body.name == "PointWall" || body.name == "PointWall2":
+		get_node("PointNoisePlayer").play()
 		SPEED = 0
 		if xDirection == -1:
 			contestantPoint = 1
 		if xDirection == 1:
 			contestantPoint = -1
 	else:
+		get_node("BumpNoisePlayer").play()
 		SPEED += 20
 		xDirection *= -1
 
 func _on_wall_bump_detection_body_entered(body):
+	get_node("BumpNoisePlayer").play()
 	yDirection *= -1
 
 func resetStatus():

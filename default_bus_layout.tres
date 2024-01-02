@@ -1,0 +1,4 @@
+[gd_resource type="AudioBusLayout" format=3 uid="uid://co7n6s2frj51m"]
+
+[resource]
+bus/0/send = &"New Bus"
